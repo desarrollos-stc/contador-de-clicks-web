@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contador de Clics - App en Google Play</title>
+    <!-- Enlace a Bootstrap 5 CSS -->
+    <link href="https://jsdelivr.net" rel="stylesheet" />
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+      .hero-section {
+        padding: 100px 0;
+        background: linear-gradient(135deg, #0d6efd 0%, #055160 100%);
+        color: white;
+      }
+      .app-icon {
+        max-width: 150px;
+        border-radius: 30px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      .counter-box {
+        font-size: 4rem;
+        font-weight: bold;
+        color: #0d6efd;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Contador de Clics</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#features">Características</a></li>
+            <li class="nav-item"><a class="nav-link" href="#demo">Demo</a></li>
+            <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-2" href="#">Descargar</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <header class="hero-section text-center">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <img src="https://placeholder.com" alt="Icono de la App" class="app-icon mb-4" />
+            <h1 class="display-4 fw-bold">¡El Mejor Contador de Clics para tu Celular!</h1>
+            <p class="lead">Cuenta lo que quieras: personas, objetos, eventos o hábitos. Rápido, ligero y fácil de usar.</p>
+            <a href="URL_DE_TU_APP_EN_PLAYSTORE" class="btn btn-dark btn-lg mt-3 shadow" target="_blank">
+              <svg xmlns="http://w3.org" width="24" height="24" fill="currentColor" class="bi bi-google-play me-2" viewBox="0 0 16 16">
+                <path
+                  d="M14.222 9.374c1.037-.61 1.037-2.138 0-2.748L11.528 5.04 8.328 8l3.2 2.96 2.894-1.586zM6.893 14.893 10.3 11.6l-3.3-3.05-3.05 3.05 2.943 3.293zM.11 11.472A1.138 1.138 0 0 1 0 10.875V5.125a1.138 1.138 0 0 1 .11-.598l5.22 5.22L.11 11.472zM10.8 4.4 7.4 1.1l-3.3 3.05 3.3 3.05 3.4-3.4z"
+                />
+              </svg>
+              Disponible en Play Store
+            </a>
+          </div>
+          <div class="col-md-6 d-none d-md-block">
+            <!-- Opcional: Imagen de la app o Mockup -->
+            <img src="https://placeholder.com" alt="Vista previa de la App" class="img-fluid shadow rounded" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Características -->
+    <section id="features" class="py-5 bg-white">
+      <div class="container text-center">
+        <h2 class="mb-5 fw-bold">¿Por qué descargar nuestra App?</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card border-0 shadow-sm p-4">
+              <h4 class="card-title text-primary">Múltiples Contadores</h4>
+              <p class="card-text">Crea y gestiona diferentes listas de conteo de forma simultánea.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card border-0 shadow-sm p-4">
+              <h4 class="card-title text-primary">Retroalimentación</h4>
+              <p class="card-text">Siente vibraciones y escucha sonidos para saber que marcaste correctamente.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card border-0 shadow-sm p-4">
+              <h4 class="card-title text-primary">Modo Oscuro</h4>
+              <p class="card-text">Ahorra batería y cuenta tus eventos cómodamente en cualquier lugar.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Demostración (Interactiva) -->
+    <section id="demo" class="py-5 bg-light">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-4">Prueba el Contador aquí</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card p-5 shadow border-0">
+              <!-- Pantalla del contador -->
+              <div id="counterDisplay" class="counter-box">0</div>
+
+              <!-- Botones de acción -->
+              <div class="mt-4">
+                <button class="btn btn-outline-danger btn-lg px-4 me-2" onclick="disminuir()">- Disminuir</button>
+                <button class="btn btn-success btn-lg px-4" onclick="aumentar()">+ Aumentar</button>
+              </div>
+
+              <!-- Botón de reinicio -->
+              <button class="btn btn-link text-muted mt-3" onclick="reiniciar()">Reiniciar contador</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+      <div class="container">
+        <p>&copy; 2026 Contador de Clics. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts de Bootstrap y Lógica del Contador -->
+    <script src="https://jsdelivr.net"></script>
+    <script>
+      let contador = 0;
+
+      function aumentar() {
+        contador++;
+        actualizarVista();
+      }
+
+      function disminuir() {
+        if (contador > 0) {
+          contador--;
+          actualizarVista();
+        }
+      }
+
+      function reiniciar() {
+        contador = 0;
+        actualizarVista();
+      }
+
+      function actualizarVista() {
+        document.getElementById("counterDisplay").innerText = contador;
+      }
+    </script>
+  </body>
+</html>
